@@ -8,6 +8,7 @@ var logger = require('morgan');
 var searchRouter = require('./routes/search');
 
 var app = express();
+app.use(express.static('frontend/dist/frontend'));
 
 var corsOptions = {
   origin: 'http://localhost:4200',
@@ -39,7 +40,6 @@ app.use(function (req, res, next) {
 });
 
 if (app.get('env') === 'production') {
-  app.use(express.static(path.join(__dirname, 'frontend/dist/frontend')));
   console.log("Inside prod")
   app.get('*', (req, res) => {
       console.log('Here');
