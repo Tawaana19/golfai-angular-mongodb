@@ -17,6 +17,7 @@
     "jade": "~1.11.0",
     "mongodb": "^3.6.1",
     "mongoose": "^5.10.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "@angular/cli":"9.7.1"
   }
 }
