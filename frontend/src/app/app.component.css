@@ -1,0 +1,16 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.login{
+  color: white
+}
+.logo{
+  line-height:1.41em;
+  font-size:22px;
+  font-weight: bold;
+}
+.logo-image{
+  width: 45px; 
+  height: 45px; 
+  object-fit: cover;
+}

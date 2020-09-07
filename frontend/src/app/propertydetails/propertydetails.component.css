@@ -1,0 +1,19 @@
+.details-card {
+    width: 50%;
+    margin-top: 3rem;
+}
+.mlr-16{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.mtb-16{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.error{
+    color: red;
+}
+.paginator{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
