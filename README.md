@@ -4,6 +4,7 @@
 3. cd to frontend
 4. Run npm install followed by npm start - This starts the fronted
 5. cd to root in a separate terminal
-6. Run node ./bin/www
-7. The application is served at localhost:4200/
+6. Set an environment variable MONGO_URI which has the connection url for the MongoDB deployment
+7. Run node ./bin/www
+8. The application is served at localhost:4200/
 
