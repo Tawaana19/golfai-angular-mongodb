@@ -2,7 +2,6 @@ const escapeStringRegexp = require('escape-string-regexp');
 const Listing = require('../models/Listing');
 
 async function getPropertyDetails(criteria) {
-    console.log("Inside getPropertyDetails")
     const reg = escapeStringRegexp(criteria);
     let propertyDetails = ''
     await Listing.find({ "$or": [

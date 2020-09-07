@@ -1,7 +1,7 @@
 <div class="d-flex flex-column h-100 align-items-center">
     <div class="d-flex flex-row">
-        <div class="input-group" [style.margin-top.vh]=25>
-            <form (keyup)="autocompletedetails($event)" (keyup.Enter)="searchDetails()">
+        <form (keyup)="autocompletedetails($event)" (keyup.Enter)="searchDetails()">
+            <div class="input-group" [style.margin-top.vh]=25>
                 <mat-form-field [style.width.px]=560 class="example-full-width" appearance="outline">
                     <mat-label>Search Listings</mat-label>
                     <input matInput [formControl]="searchFormControl" [errorStateMatcher]="matcher"
@@ -13,7 +13,10 @@
                         </mat-option>
                     </mat-autocomplete>
                 </mat-form-field>
-            </form>
-        </div>
+            </div>
+            <div class="d-flex justify-content-center" [style.margin-top.px]=16>
+                <button mat-raised-button color="primary" (click)="searchDetails()" [disabled]="searchFormControl.invalid">Search</button>
+            </div>
+        </form>
     </div>
 </div>

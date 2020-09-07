@@ -22,7 +22,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, 'public')));
 
 
 if (app.get('env') === 'development') {
@@ -40,11 +39,11 @@ app.use(function (req, res, next) {
 });
 
 if (app.get('env') === 'production') {
-  app.use(express.static('public/build'));
+  app.use(express.static(path.join(__dirname, 'frontend/dist/frontend')));
   console.log("Inside prod")
   app.get('*', (req, res) => {
       console.log('Here');
-      res.sendFile(path.resolve(__dirname, 'public', 'build', 'index.html'));
+      res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'frontend', 'index.html'));
   });
 }
 
