@@ -31,6 +31,7 @@ export class PropertydetailsComponent implements OnInit {
   }
 
   getListings(value) {
+    console.log("BackendURL:"+environment.backendUrl)
     return this.http.get(environment.backendUrl+"search?searchParam=" + value);
   }
 }
